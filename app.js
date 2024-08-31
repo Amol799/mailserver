@@ -49,8 +49,11 @@ async function sendMail(user, callback) {
   let mailOptions = {
     from: 'This is from Akshaj Cold Press Oil', // sender address
     to: user.email, // list of receivers
-    subject: "Akshaj Cold Press Oil Enquiry for : " + user.name, // Subject line
-    html: `<h1>Hi ${user.name}</h1><br>
+    subject: "subject : " + user.subject,// Subject line
+    html: `<h4>Hi ${user.name}</h4><br>
+    <h4>Email :  ${user.email}</h4><br>
+
+    <h4>${user.body}</h4>
     <h4>Thanks for joining us</h4>`
   };
 
